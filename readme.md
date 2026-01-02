@@ -28,10 +28,10 @@ Rental Car Management/
 │   └── cars.json         
 │
 └── screenshots/          
-    ├── post-request.png
+    ├── get-request.png
     └── put-request.png
-
-
+    └── post-request.png
+    └── delete-request.png
 ---
 ## 🚀 Getting Started
 
