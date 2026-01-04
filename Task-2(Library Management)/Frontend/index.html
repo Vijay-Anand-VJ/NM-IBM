@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StackManager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="brand">LIBRARY MANAGEMENT</div>
+    
+    </header>
+
+    <div class="container">
+        
+        <div class="brutal-box input-zone">
+            <h2>// ADD NEW BOOK</h2>
+            <div class="form-grid">
+                <div class="field">
+                    <label>TITLE</label>
+                    <input type="text" id="p-title" placeholder="Ex: Clean Code">
+                </div>
+                <div class="field">
+                    <label>AUTHOR</label>
+                    <input type="text" id="p-author" placeholder="Ex: Uncle Bob">
+                </div>
+                <div class="field">
+                    <label>CATEGORY</label>
+                    <select id="p-category">
+                        <option value="Tech">Tech</option>
+                        <option value="Design">Design</option>
+                        <option value="Business">Business</option>
+                        <option value="Fiction">Fiction</option>
+                    </select>
+                </div>
+                <div class="field-row">
+                    <div class="field">
+                        <label>YEAR</label>
+                        <input type="number" id="p-year" placeholder="2024">
+                    </div>
+                    <div class="field">
+                        <label>QTY</label>
+                        <input type="number" id="p-copies" placeholder="10">
+                    </div>
+                </div>
+            </div>
+            <button onclick="pushData()" class="btn-bold">PUSH TO INVENTORY -></button>
+        </div>
+
+        <div class="brutal-box list-zone">
+            <div class="zone-header">
+                <h2>// CURRENT INVENTORY</h2>
+                
+                <div class="filter-controls">
+                    <span>FILTER:</span>
+                    <button onclick="refreshStack('recent')" class="btn-filter">NEW (>2015)</button>
+                    <button onclick="refreshStack('fiction')" class="btn-filter">FICTION</button>
+                    <button onclick="refreshStack()" class="btn-filter btn-reset">RESET</button>
+                </div>
+            </div>
+
+            <div id="stack-container">
+                </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
